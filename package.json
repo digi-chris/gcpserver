@@ -1,0 +1,29 @@
+{
+  "name": "gcpserver",
+  "version": "0.2.1",
+  "description": "A generic network communications library which eases the development of client->server web applications.",
+  "main": "gcp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digi-chris/gcpserver.git"
+  },
+  "keywords": [
+    "generic",
+    "network",
+    "communications",
+    "client",
+    "server",
+    "javascript",
+    "web",
+    "application"
+  ],
+  "author": "Chris Barnard <chris@barnard.tech> (http://barnard.tech/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/digi-chris/gcpserver/issues"
+  },
+  "homepage": "https://github.com/digi-chris/gcpserver#readme"
+}

@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>GCP Server</title>
+		<script src="gcp-client.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1>GCP Server Active!</h1>
+		<script>
+			var ipAddress = "localhost";
+			var gcp = new gcpClient(ipAddress, "4999", function() {
+				console.log("GCP server contacted at " + ipAddress + ".");
+				gcp.server.testFunction("Hello from client!");
+				gcp.server.badFunction();
+				gcp.server.rawCallbackEx(1);
+				gcp.server.complexResponse("customers", 1000);
+			});
+		</script>
+	</body>
+</html>
