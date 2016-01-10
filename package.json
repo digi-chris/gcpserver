@@ -1,6 +1,6 @@
 {
   "name": "gcpserver",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A generic network communications library which eases the development of client->server web applications.",
   "main": "gcp.js",
   "scripts": {

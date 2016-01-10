@@ -21,7 +21,7 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 var path = require('path');
-var _gcp_version = "0.2.1";
+var _gcp_version = "0.2.3";
 
 var DEFAULT_LISTEN_PORT = 5000;
 var DEFAULT_DATA_PORT = 5001;
@@ -108,6 +108,18 @@ module.exports = {
 			
 			if(typeof settings.detailedErrors === 'boolean') {
 				this.settings.detailedErrors = settings.detailedErrors;
+			}
+		}
+		
+		if(typeof defaultNamespace === 'undefined') {
+			// we don't have a default namespace set, just pick the first one that isn't
+			// 'system'.
+			for(var nobj in this.namespaces) {
+				if(nobj !== 'system') {
+					this.namespaces['default'] = this.namespaces[nobj];
+					console.log('Automatically setting \'' + nobj + '\' as the default namespace');
+					break;
+				}
 			}
 		}
 		
