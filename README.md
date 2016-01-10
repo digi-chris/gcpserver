@@ -1,4 +1,4 @@
-# gcpserver
+# GCPServer
 
 The Generic Control Protocol, or GCP, aims to make the development of client-server software as easy as possible by quietly abstracting the communications layer, leaving the developer free to create exposed functions on the server and seamlessly call them from the client.
 
@@ -6,8 +6,7 @@ Generic Control Protocol v0.2.3 by Chris Barnard, 2016.
 GCP is released under GPL version 3.0
 
 
-NOTES ON GETTING STARTED
-————————————————————————
+# NOTES ON GETTING STARTED
 
 I’m still putting together documentation and a website for this project at present. The
 best source of information for implementing client and server communication is to look
@@ -21,8 +20,7 @@ commands on the server. It assumes you are running on localhost, and you’ll on
 output on the browser’s developer console.
 
 
-INTRODUCTION
-————————————
+# INTRODUCTION
 
 GCP is a network protocol designed to allow software developers to easily prototype and
 operate client->server communications without needing to worry about the underlying
@@ -39,8 +37,7 @@ concentrate on developing your own code instead of spending hours setting up com
 networking procedures and wrestling with multiple technologies.
 
 
-BASIC EXAMPLE
-—————————————
+# BASIC EXAMPLE
 
 For example, let’s say you set up a function on a server to access a MySQL database and
 return a number of rows. If this function is exposed through GCP, you can connect to the
@@ -74,8 +71,7 @@ var gcp = new gcpClient(address, port, function() {
 });
 
 
-OTHER NOTES
-———————————
+# OTHER NOTES
 
 This shouldn’t be considered production ready yet. This is software is primarily for
 experimentation and evaluation. Primarily, all network traffic is unencrypted, so it’s not
@@ -96,8 +92,7 @@ example of commands being sent to/from the server. See the example.js file for m
 information on how to implement your own GCP server.
 
 
-CONTACT
-———————
+# CONTACT
 
 You can contact me at chris@barnard.tech for more info.
 
