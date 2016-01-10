@@ -46,6 +46,7 @@ local function call.
 
 On the server:
 
+```javascript
 // set
 var myExposedFunctions = function() {
     this.getSomeData = function (dataTable, any, other, parameters) {
@@ -59,9 +60,11 @@ var myExposedFunctions = function() {
 // with code clarity.
 
 var gcpServer = gcp.GCPServer({ exports : {‘myfunctions’ : myExposedFunctions }});
+```
 
 On the client:
 
+```javascript
 var gcp = new gcpClient(address, port, function() {
     // callback lets us know once we are connected
     gap.server.getSomeData(“customer_table”, “other_params”, 2, 3, function(response) {
@@ -69,7 +72,7 @@ var gcp = new gcpClient(address, port, function() {
         var theRows = response.data;
     });
 });
-
+```
 
 # OTHER NOTES
 
